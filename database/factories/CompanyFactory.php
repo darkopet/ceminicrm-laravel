@@ -22,11 +22,11 @@ class CompanyFactory extends Factory
     public function definition()
     {
         return [
-            'cmp_id' => Employee::company_id(),
-            'name' => $this->faker->company,
-            'email' => $this->faker->companyEmail,
-            'website' => $this->faker->url,
-            'logo' => $this->faker->image
+            'cmp_id' => Company::create()->random_int(0, 10),
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'website' => $this->faker->url(),
+            'logo' => $this->faker->image()
         ];
     }
     

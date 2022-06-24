@@ -12,6 +12,7 @@ class Company extends Model
     use HasFactory;
 
     protected $fillable = [
+        'cmp_id',
         'name',
         'email',
         'logo',
