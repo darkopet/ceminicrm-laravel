@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 use App\Models\Company;
 use App\Models\User;
 use App\Models\Employee;
@@ -25,7 +26,8 @@ class CompanyFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'website' => $this->faker->url(),
-            'logo' => $this->faker->image()
+            'logo' => $this->faker->image(),
+            'remember_token' => Str::random(10)
         ];
     }
     
