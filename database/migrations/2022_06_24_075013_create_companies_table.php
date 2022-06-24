@@ -18,7 +18,6 @@ return new class extends Migration
             $table->increments('cmp_id')->unsigned();
             $table->string('name');
             $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('logo')->nullable();
             $table->string('website')->nullable();
             $table->rememberToken();
