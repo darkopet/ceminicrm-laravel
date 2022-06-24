@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 use App\Models\Employee;
+use Database\Factories;
 
 class EmployeesTableSeeder extends Seeder
 {
@@ -15,6 +17,7 @@ class EmployeesTableSeeder extends Seeder
      */
     public function run()
     {
-       $employee = Employee::factory(5)->create();
+        // factory(Employee::class, 50)->create();
+        $employee = Employee::factory(50)->create();
     }
 }

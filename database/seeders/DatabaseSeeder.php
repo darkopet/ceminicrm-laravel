@@ -4,9 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User;
-use App\Models\Employee;
-Use App\Models\Company;
 
 class DatabaseSeeder extends Seeder
 {

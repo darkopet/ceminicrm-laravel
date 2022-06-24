@@ -17,11 +17,17 @@ class UsersTableSeeder extends Seeder
     {
         $user = User::factory(10)->create();
         
+        // DB::table('users')->insert([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@admin.com',
+        //     'password' => bcrypt('password'),
+        // ]);
+
         // Create an Admin User Account
         // $admin = table('users')->insert([
         //     'name' => 'Admin',
         //     'email' => 'admin@admin.com',
-        //     'password' => 'password',
+        //     'password' => 'password'
         // ]);
     }
 }
