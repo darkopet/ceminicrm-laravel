@@ -12,9 +12,16 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
+        Schema::dropIfExists('companies');
         Schema::create('companies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('cmp_id')->unsigned();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('website')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

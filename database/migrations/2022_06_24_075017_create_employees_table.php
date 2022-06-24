@@ -13,9 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('employees');
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('firstName');
+            $table->string('lastName');
+            $table->unsignedInteger('company_id');
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->rememberToken();
             $table->timestamps();
+        });
+        Schema::table('employees', function($table)
+        {
+            $table->foreign('company_id')->references('cmp_id')->on('companies');
         });
     }
 
