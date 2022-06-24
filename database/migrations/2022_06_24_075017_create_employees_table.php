@@ -25,10 +25,12 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        Schema::table('employees', function($table)
-        {
-            $table->foreign('company_id')->references('cmp_id')->on('companies');
-        });
+        
+        # Foreign Key (FK) Constraint
+        // Schema::table('employees', function($table)
+        // {
+        //     $table->foreign('company_id')->references('cmp_id')->on('companies');
+        // });
     }
 
     /**

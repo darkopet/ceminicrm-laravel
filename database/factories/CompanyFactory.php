@@ -22,7 +22,6 @@ class CompanyFactory extends Factory
     public function definition()
     {
         return [
-            'cmp_id' => Company::create()->random_int(0, 10),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'website' => $this->faker->url(),
