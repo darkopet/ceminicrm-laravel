@@ -4,9 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator as Faker;
-use App\Models\User;
-use App\Models\Employee;
 use App\Models\Company;
+use App\Models\Employee;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Company>
@@ -24,11 +23,11 @@ class CompanyFactory extends Factory
         $filepath = storage_path('images');
 
         return [
+            'cmp_id' => Employee::all()->company_id,
             'name' => $this->faker->company,
             'email' => $this->faker->companyEmail,
             'website' => $this->faker->url,
             'logo' => $this->faker->image($filepath, 100, 100, false),
-            'user_id' => 1
         ];
     }
 }

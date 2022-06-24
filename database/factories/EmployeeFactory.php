@@ -2,15 +2,15 @@
 
 namespace Database\Factories;
 
+use App\Models\Company;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator as Faker;
-use App\Models\User;
 use App\Models\Employee;
-use App\Models\Company;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employee>
  */
+
 class EmployeeFactory extends Factory
 {
     /**
@@ -21,12 +21,12 @@ class EmployeeFactory extends Factory
     public function definition()
     {
         return [
+            'id' => Employee::factory(),
             'firstName' => $this->faker->firstName,
             'lastName' => $this->faker->lastName,
-            'company_id' => $this->faker->numberBetween(1, 10),
+            'company_id' => Employee::factory(),
             'email' => $this->faker->safeEmail,
-            'phone' => $this->faker->phoneNumber,
-            'user_id' => 2
+            'phone' => $this->faker->phoneNumber
         ];
     }
 }
