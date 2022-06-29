@@ -34,11 +34,17 @@ class CompanyController extends Controller
             'name' => 'required',
             'email' => 'required',
             'logo' => 'required',
-            'website' => null
+            'website' => 'required'
         ]);
 
         Company::create($attributes);
 
-        return redirect('/employees');
+        return redirect('/companies');
+    }
+
+        public function destroy(Company $company)
+    {
+        $company->delete();
+        return back()->with('success', 'Company offed.');
     }
 }
