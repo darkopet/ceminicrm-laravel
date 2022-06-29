@@ -27,14 +27,14 @@ class Employee extends Model
     //Pagnation Per Page
     protected $perPage = 10;
 
-    public function creator()
-    {
-        return $this->belongsTo(User::class);
-    }
+    // public function creator()
+    // {
+    //     return $this->belongsTo(User::class);
+    // }
 
-    public function company()
+    public function companies()
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo(new Company());
     }
 
     /**

@@ -22,17 +22,17 @@ class Company extends Model
     //Pagnation Per Page
     protected $perPage = 10;
 
-    public function creator()
-    {
-        return $this->belongsTo(User::class);
-    }
+    // public function creator()
+    // {
+    //     return $this->belongsTo(new User());
+    // }
 
     /**
      * The employees that belong to the user.
      */
     public function employees()
     {
-        return $this->hasMany(Employee::class);
+        return $this->hasMany(new Employee());
     }
 
     /**

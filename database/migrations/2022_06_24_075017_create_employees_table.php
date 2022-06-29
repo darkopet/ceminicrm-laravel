@@ -19,7 +19,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('firstName');
             $table->string('lastName');
-            $table->unsignedInteger('company_id');
+            $table->integer('company_id')->unsigned()->index();
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->rememberToken();
