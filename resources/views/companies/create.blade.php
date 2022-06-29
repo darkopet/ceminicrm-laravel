@@ -1,7 +1,7 @@
 <x-layout>
     <x-setting heading="Add New Employee">
         <p>
-            <a href="/copmanies" class="btn btn-success">Back To Companies</a>
+            <a href="/companies" class="btn btn-success">Back To Companies</a>
         </p>
         <form method="POST" action="/companies/create" enctype="multipart/form-data">
             @csrf  
