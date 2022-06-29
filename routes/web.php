@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\CompaniesController;
-use app\Http\Controllers\EmployeesController;
+use app\Http\Controllers\CompanyController;
+use app\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/employees', [new EmployeesController(), 'index']);
-Route::get('/employees/index', [new EmployeesController(), 'index']);
-Route::get('/companies', new CompaniesController(), 'index');
-Route::get('/companies/index', new CompaniesController(), 'index');
+Route::get('/employees', [new EmployeeController(), 'index']);
+Route::get('/employees/index', [new EmployeeController(), 'index']);
+Route::get('/companies', new CompanyController(), 'index');
+Route::get('/companies/index', new CompanyController(), 'index');

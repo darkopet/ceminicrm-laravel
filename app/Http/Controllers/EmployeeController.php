@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use app\Models\Employee;
 
-class EmployeesController extends Controller
+class EmployeeController extends Controller
 {
     public function index()
     {
         return view('employees.index', [
-            'employees' => Employee::latest()->paginate(10)
+            'employees' => Employee::paginate(10)
         ]); 
     }
 
