@@ -17,6 +17,7 @@
     <title>Mini CRM AdminPanel</title>
   </head>
 
+  
       <body>
             <?php echo $content; ?>
       </body>
