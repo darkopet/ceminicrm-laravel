@@ -12,11 +12,14 @@ class EmployeesController extends Controller
         return view('employees.index', [
             'employees' => Employee::latest()->paginate(10)
         ]); 
-    }  
+    }
+
     public function show(Employee $employee)
     {
         return view('employees.show', [
             'employee' => $employee
         ]);
     }
+
+    
 }

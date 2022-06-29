@@ -8,6 +8,6 @@ use App\Models\Company;
 class CompaniesController extends Controller
 {
 
-
+    
 
 }
