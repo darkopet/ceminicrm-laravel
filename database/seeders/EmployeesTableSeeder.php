@@ -20,7 +20,11 @@ class EmployeesTableSeeder extends Seeder
         // Use Factory to seed employee data
         // factory(Employee::class, 50)->create();
         // factory(app\Models\Employee::class, 20)->create();
-        \App\Models\Employee::factory()->count(20)->create();
         // $employee = Employee::factory(20)->create();
+        // \App\Models\Employee::factory()->count(20)->create();
+        // \App\Models\Employee::factory()->count(2o)->create();
+        // \App\Models\Employee::factory()->count(20)->create();
+
+        Employee::factory()->count(20)->create();
     }
 }

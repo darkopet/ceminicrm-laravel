@@ -15,8 +15,18 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::factory(10)->create();
-        
+        // $user = User::factory(10)->create();
+        // $user = User::factory(5)->create();
+        // $user = User::factory(5)->create();
+        // $user = User::factory(5)->create();
+        // \App\Models\User::factory()->count(5)->create();
+        // \App\Models\User::factory()->count(5)->create();
+        // \App\Models\User::factory()->count(5)->create();
+        // \App\Models\User::factory()->count(5)->create();
+        // \App\Models\User::factory()->count(3)->create();
+
+        User::factory()->count(3)->create();        
+
         // DB::table('users')->insert([
         //     'name' => 'Admin',
         //     'email' => 'admin@admin.com',

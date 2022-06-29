@@ -20,7 +20,10 @@ class CompaniesTableSeeder extends Seeder
         // Use Factory to seed company data
         // factory(Company::class, 5)->create();
         // factory(app\Models\Company::class, 5)->create();
-        \App\Models\Company::factory()->count(5)->create();
         // $company = Company::factory(5)->create();
+        // \App\Models\Company::factory()->count(5)->create();
+        // \App\Models\Company::factory()->count(5)->create();
+
+        Company::factory()->count(5)->create();
     }
 }   

@@ -14,19 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call([
-        //     UsersTableSeeder::class,
-        //     CompaniesTableSeeder::class,
-        //     EmployeesTableSeeder::class,
-        // ]);
+        $this->call([
+            UsersTableSeeder::class,
+            CompaniesTableSeeder::class,
+            EmployeesTableSeeder::class,
+        ]);
 
         // $this->call(new UsersTableSeeder());
         // $this->call(new CompaniesTableSeeder());
         // $this->call(new EmployeesTableSeeder());
 
-        $this->call(UsersTableSeeder::class);
-        $this->call(CompaniesTableSeeder::class);
-        $this->call(EmployeesTableSeeder::class);
+        // $this->call(UsersTableSeeder::class);
+        // $this->call(CompaniesTableSeeder::class);
+        // $this->call(EmployeesTableSeeder::class);
 
         // \App\Models\User::factory(10)->create();
         // \App\Models\User::factory()->create([
