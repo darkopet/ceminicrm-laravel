@@ -25,7 +25,10 @@ class UsersTableSeeder extends Seeder
         // \App\Models\User::factory()->count(5)->create();
         // \App\Models\User::factory()->count(3)->create();
 
-        User::factory()->count(3)->create();        
+        User::factory()->count(1)->create([
+            'email' => 'admin@admin.com',
+            'password' => 'password'
+        ]);        
 
         // DB::table('users')->insert([
         //     'name' => 'Admin',
