@@ -31,23 +31,23 @@
     <form action="" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
-            <label>company First Name</label>
-            <input type="text" name="Name" value="<?php echo $company['name'] ?>" class="form-control">
+            <label>Company First Name</label>
+            <input type="text" name="Name" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
-            <label>company Last Name</label>
-            <input type="text" name="Email" value="<?php echo $company['email'] ?>" class="form-control">
+            <label>Company Logo</label>
+            <input type="text" name="Logo" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
-            <label>Company</label>
-            <input type="number" name="Logo" value="<?php echo $company['logo'] ?>" class="form-control">
+            <label>Email</label>
+            <input type="number" name="Email" value="<?php ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
-            <label>Company Email</label>
-            <input type="text" name="Website" value="<?php echo $company['website'] ?>" class="form-control">
+            <label>Website</label>
+            <input type="text" name="Website" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

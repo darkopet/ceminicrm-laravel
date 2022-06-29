@@ -33,27 +33,27 @@
 
         <div class="form-group">
             <label>Employee First Name</label>
-            <input type="text" name="FirstName" value="<?php echo $employee['firstName'] ?>" class="form-control">
+            <input type="text" name="FirstName" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Employee Last Name</label>
-            <input type="text" name="LastName" value="<?php echo $employee['lastName'] ?>" class="form-control">
+            <input type="text" name="LastName" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
-            <label>Company</label>
-            <input type="number" name="Company" value="<?php echo $employee['company_id'] ?>" class="form-control">
+            <label>Company ID</label>
+            <input type="number" name="Company" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Company Email</label>
-            <input type="text" name="CompanyEmail" value="<?php echo $employee['email'] ?>" class="form-control">
+            <input type="text" name="CompanyEmail" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Phone</label>
-            <input type="text" name="Phone" value="<?php echo $employee['phone'] ?>" class="form-control">
+            <input type="text" name="Phone" value="<?php  ?>" class="form-control">
             <br>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
