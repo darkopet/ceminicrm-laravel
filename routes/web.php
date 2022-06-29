@@ -34,8 +34,8 @@ Route::post('employees/update', [EmployeeController::class, 'update']);
 Route::get('companies/update', [CompanyController::class, 'update']);
 Route::post('companies/update', [CompanyController::class, 'update']);
 
-Route::post('employees/delete', [EmployeeController::class, 'delete']);
-Route::post('companies/delete', [CompanyController::class, 'delete']);
+Route::delete('employees/delete', [EmployeeController::class, 'destroy']);
+Route::delete('companies/delete', [CompanyController::class, 'destroy']);
 
 // Route::get('/employees', [new EmployeeController(), 'index']);
 // Route::get('/employees/index', [new EmployeeController(), 'index']);

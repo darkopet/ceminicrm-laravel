@@ -13,7 +13,7 @@ class EmployeeController extends Controller
     {   
         $search = $_GET['search'] ?? '';
         return view('employees.index', [
-            'employees' => Employee::paginate(10),
+            'employees' => Employee::paginate(30),
             'search' => $search
         ]); 
     }
@@ -84,6 +84,12 @@ class EmployeeController extends Controller
 
         Employee::create($attributes);
 
-        return view('/create');
+        return redirect('/employees');
+    }
+
+    public function destroy(Employee $employee)
+    {
+        $employee->delete();
+        return back()->with('success', 'Employee off.');
     }
 }
