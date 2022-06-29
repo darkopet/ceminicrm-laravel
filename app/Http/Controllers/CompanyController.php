@@ -23,8 +23,22 @@ class CompanyController extends Controller
         ]);
     }
 
-        public function create()
+    public function create()
     {   
         return view('companies.create');
+    }
+
+    public function store()
+    {
+        $attributes = request()->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'logo' => 'required',
+            'website' => null
+        ]);
+
+        Company::create($attributes);
+
+        return redirect('/employees');
     }
 }

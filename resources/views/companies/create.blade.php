@@ -20,13 +20,13 @@
 </head>
 
 <body>
-    <?php if (!empty($errors)) : ?>
-        <div class="alert alert-danger">
-            <?php foreach ($errors as $error) : ?>
-                <div> <?php echo $error ?> </div>
-            <?php endforeach; ?>
+    <?php // if (!empty($errors)) : ?>
+        <!-- <div class="alert alert-danger"> -->
+            <?php // foreach ($errors as $error) : ?>
+                <div> <?php // echo $error ?> </div>
+            <?php // endforeach; ?>
         </div>
-    <?php endif; ?>
+    <?php // endif; ?>
 
     <form action="" method="post" enctype="multipart/form-data">
 
