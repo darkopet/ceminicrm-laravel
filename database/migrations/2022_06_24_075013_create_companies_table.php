@@ -15,7 +15,7 @@ return new class extends Migration
     {   
         Schema::dropIfExists('companies');
         Schema::create('companies', function (Blueprint $table) {
-            $table->increments('cmp_id');
+            $table->increments('cmp_id')->unsigned();
             $table->string('name');
             $table->string('email');
             $table->string('logo')->nullable();

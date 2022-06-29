@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->integer('company_id')->unsigned()->index();
-            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('company_id')->references('cmp_id')->on('companies')->onDelete('cascade');
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->rememberToken();
