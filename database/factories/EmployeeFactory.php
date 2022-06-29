@@ -22,7 +22,7 @@ class EmployeeFactory extends Factory
                     return [
                         'firstName' => $this->faker->firstName,
                         'lastName' => $this->faker->lastName,
-                        'company_id' => $this->faker->numberBetween(1, 10),
+                        'company_id' => $this->faker->numberBetween($min = 1, $max = 5),
                         'email' => $this->faker->safeEmail,
                         'phone' => $this->faker->phoneNumber,
                         'remember_token' => Str::random(10),

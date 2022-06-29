@@ -15,6 +15,9 @@ use Faker\Generator as Faker;
 
 class CompanyFactory extends Factory
 {
+    
+    protected $model = \App\Models\Company::class;
+
     /**
      * Define the model's default state.
      *
