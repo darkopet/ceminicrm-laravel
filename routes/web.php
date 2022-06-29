@@ -25,9 +25,9 @@ Route::get('/companies', [CompanyController::class, 'index']);
 Route::get('/companies/index', [CompanyController::class, 'index']);
 
 Route::get('/employees/create', [EmployeeController::class, 'create']);
-Route::post('/employees/create', [EmployeeController::class, 'create']);
+Route::post('/employees/create', [EmployeeController::class, 'store']);
 Route::get('/companies/create', [CompanyController::class, 'create']);
-Route::post('/controller/create', [CompanyController::class, 'create']);
+Route::post('/controller/create', [CompanyController::class, 'store']);
 
 Route::get('employees/update', [EmployeeController::class, 'update']);
 Route::post('employees/update', [EmployeeController::class, 'update']);

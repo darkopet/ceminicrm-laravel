@@ -78,12 +78,12 @@ class EmployeeController extends Controller
             'firstName' => 'required',
             'lastName' => 'required',
             'company_id' => 'required',
-            'email' => null,
-            'phone' => null
+            'email' => 'required',
+            'phone' => 'required'
         ]);
 
         Employee::create($attributes);
 
-        return redirect('/employees');
+        return view('/create');
     }
 }

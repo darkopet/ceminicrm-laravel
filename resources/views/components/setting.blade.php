@@ -6,7 +6,7 @@
     </h1>
 
     <div class="flex">
-        <aside class="w-48 flex-shrink-0">
+        <!-- <aside class="w-48 flex-shrink-0">
             <h4 class="font-semibold mb-4">Links</h4>
 
             <ul>
@@ -18,7 +18,7 @@
                     <a href="/admin/posts/create" class="{{ request()->is('/admin/create') ? 'text-blue-500' : '' }}">New Post</a>
                 </li>
             </ul>
-        </aside>
+        </aside> -->
 
         <main class="flex-1">
             <x-panel>
