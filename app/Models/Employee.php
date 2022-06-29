@@ -34,7 +34,7 @@ class Employee extends Model
 
     public function company()
     {
-        return $this->belongsTo(new Company());
+        return $this->belongsTo(Company::class);
     }
 
     /**

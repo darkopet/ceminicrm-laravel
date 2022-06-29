@@ -1,4 +1,6 @@
-<p><a href="/employees/index" class="btn btn-secondary">Go Back To EMPLOYEES</a></p>
+<p>
+    <a href="/employees/index" class="btn btn-secondary">Go Back To EMPLOYEES</a>
+</p>
 
 <h2>NEW Employee</h2>
 
@@ -29,35 +31,77 @@
         </div>
     <?php endif; ?>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="/employees/create" method="POST" enctype="multipart/form-data">
+
+        <?php
+        $EmployeeData = [
+            'firstName' => '',
+            'lastName' => '',
+            'company_id' => '',
+            'email' => '',
+            'phone' => ''
+        ];
+
+        # Loading data from the $_POST and $_FILES via the controller
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //     $EmployeeData['FirstName'] = $_POST['FirstName'];
+        //     $EmployeeData['LastName'] = $_POST['LastName'];
+        //     $EmployeeData['Company'] = (int)$_POST['Company'];
+        //     $EmployeeData['CompanyEmail'] = $_POST['CompanyEmail'] ?? null;
+        //     $EmployeeData['Phone'] = $_POST['Phone'] ?? null;
+        // }
+        ?>
 
         <div class="form-group">
             <label>Employee First Name</label>
-            <input type="text" name="FirstName" value="<?php  ?>" class="form-control">
+            <input type="text" name="FirstName" value="<?php $EmployeeData['firstName'] ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Employee Last Name</label>
-            <input type="text" name="LastName" value="<?php  ?>" class="form-control">
+            <input type="text" name="LastName" value="<?php $EmployeeData['lastName'] ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Company ID</label>
-            <input type="number" name="Company" value="<?php  ?>" class="form-control">
+            <input type="number" name="Company" value="<?php $EmployeeData['company_id'] ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Company Email</label>
-            <input type="text" name="CompanyEmail" value="<?php  ?>" class="form-control">
+            <input type="text" name="CompanyEmail" value="<?php $EmployeeData['email'] ?>" class="form-control">
             <br>
         </div>
         <div class="form-group">
             <label>Phone</label>
-            <input type="text" name="Phone" value="<?php  ?>" class="form-control">
+            <input type="text" name="Phone" value="<?php $EmployeeData['phone'] ?>" class="form-control">
             <br>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <?php
+    echo "<pre>";
+    var_dump($EmployeeData);
+    echo "</pre><br><br>";
+    // # Instance of the class Employee created before
+    // $Employee = new \App\Models\Employee();
+    // # Loading into the model    
+    // $Employee->load($EmployeeData);
+    // $Employee->save();
+    ?>
+
+    <?php
+    echo "<pre>";
+    var_dump($_SERVER);
+    echo "</pre><br><br>";
+    echo "<pre>";
+    var_dump($_GET);
+    echo "</pre><br><br>";
+    echo "<pre>";
+    var_dump($_POST);
+    echo "</pre><br><br>";
+    ?>
 </body>
 
 </html>

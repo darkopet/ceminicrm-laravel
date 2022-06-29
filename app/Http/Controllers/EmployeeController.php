@@ -77,7 +77,7 @@ class EmployeeController extends Controller
         $attributes = request()->validate([
             'firstName' => 'required',
             'lastName' => 'required',
-            'company_id' => ['required', Rule::exists('company', 'id')],
+            'company_id' => 'required',
             'email' => null,
             'phone' => null
         ]);
