@@ -49,11 +49,10 @@
             <?php foreach ($companies as $i => $company) : ?>
                 <tr>
                     <th scope="row"><?php echo $i + 1 ?></th>
-                    <td><?php echo $company['firstName'] ?></td>
-                    <td><?php echo $company['lastName'] ?></td>
-                    <td><?php echo $company['company_id'] ?></td>
+                    <td><?php echo $company['name'] ?></td>
                     <td><?php echo $company['email'] ?></td>
-                    <td><?php echo $company['phone'] ?></td>
+                    <td><?php echo $company['logo'] ?></td>
+                    <td><?php echo $company['website'] ?></td>
                     <td>
                         <a href="/companies/update?id=<?php echo $company['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
 

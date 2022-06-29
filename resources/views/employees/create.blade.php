@@ -1,4 +1,4 @@
-<p><a href="/employees/index" class="btn btn-secondary">Go Back To AdminPanel</a></p>
+<p><a href="/employees/index" class="btn btn-secondary">Go Back To EMPLOYEES</a></p>
 
 <h2>NEW Employee</h2>
 

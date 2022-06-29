@@ -15,7 +15,7 @@
 
 <body>
     <p>
-       <a href="/companies" class="btn btn-success">Go To Companies</a>
+        <a href="/companies" class="btn btn-success">Go To Companies</a>
     </p>
     <h1>Employees AdminPanel</h1>
     <p>
