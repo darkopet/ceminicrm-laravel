@@ -19,6 +19,8 @@ class Company extends Model
         'website'
     ];
     
+    protected $primaryKey = 'cmp_id';
+    
     //Pagnation Per Page
     protected $perPage = 10;
 
