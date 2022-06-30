@@ -87,6 +87,29 @@ class EmployeeController extends Controller
         return redirect('/employees');
     }
 
+    public function edit(Employee $employee)
+    {
+        return view('employees.edit', ['employee' => $employee]);
+    }
+
+    public function update(Employee $employee)
+    {
+        $attributes = request()->validate([
+            'firstName' => 'required',
+            'lastName' => 'image',
+            'company_id' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+            // 'category_id' => ['required', Rule::exists('categories', 'id')]
+        ]);
+
+        // if (isset($attributes['thumbnail'])) {
+        //     $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+
+        $employee->update($attributes);
+        return back()->with('success', 'Employee Data Updated!');
+    }
+
     public function destroy(Employee $employee)
     {
         $employee->delete();
