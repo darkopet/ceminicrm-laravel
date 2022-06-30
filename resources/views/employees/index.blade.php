@@ -57,10 +57,18 @@
                     <td>
                         <a href="/employees/edit?id=<?php echo $employee['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
 
-                        <form style="display: inline-block" method="post" action="/employees/delete">
-                            <input type="hidden" name="id" value="<?php echo $employee['id'] ?> ">
+                    <!-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> -->
+                        <form style="display: inline-block" method="POST" action="/employees/{{ $employee->id }}">
+                            @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                            <!-- <button class="text-xs text-gray-400">Delete</button> -->
                         </form>
+                    <!-- </td> -->
+                        <!-- <form style="display: inline-block" method="post" action="/employees/delete">
+                            <input type="hidden" name="id" value="<?php // echo $employee['id'] ?> ">
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                        </form> -->
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -54,11 +54,13 @@
                     <td><?php echo $company['logo'] ?></td>
                     <td><?php echo $company['website'] ?></td>
                     <td>
-                        <a href="/companies/update?id=<?php echo $company['id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        <a href="/companies/update?id=<?php echo $company['cmp_id'] ?>" class="btn btn-sm btn-outline-secondary">Edit</a>
 
-                        <form style="display: inline-block" method="post" action="/companies/delete">
-                            <input type="hidden" name="id" value="<?php echo $company['id'] ?> ">
+                        <form style="display: inline-block" method="POST" action="/companies/{{ $company->cmp_id }}">
+                            @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                            <!-- <button class="text-xs text-gray-400">Delete</button> -->
                         </form>
                     </td>
                 </tr>

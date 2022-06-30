@@ -42,9 +42,9 @@ class CompanyController extends Controller
         return redirect('/companies');
     }
 
-        public function destroy(Company $company)
+    public function destroy(Company $company)
     {
         $company->delete();
-        return back()->with('success', 'Company offed.');
+        return back()->with('success', 'Company off.');
     }
 }
