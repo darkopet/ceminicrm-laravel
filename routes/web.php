@@ -29,6 +29,8 @@ Route::post('/employees/create', [EmployeeController::class, 'store']);
 Route::get('/companies/create', [CompanyController::class, 'create']);
 Route::post('/companies/create', [CompanyController::class, 'store']);
 
+Route::get('/employees/{employee}/edit', [EmployeeController::class, 'edit']);
+
 Route::get('employees/update', [EmployeeController::class, 'update']);
 Route::post('employees/update', [EmployeeController::class, 'update']);
 Route::get('companies/update', [CompanyController::class, 'update']);
