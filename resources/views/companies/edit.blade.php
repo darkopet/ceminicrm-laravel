@@ -1,6 +1,6 @@
 <x-layout>
     <x-setting :heading="'Edit Company Data: ' . $company->name">
-        <form method="POST" action="/company/{{ $company->id }}" enctype="multipart/form-data">
+        <form method="POST" action="/companies/{{ $company->id }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
 
