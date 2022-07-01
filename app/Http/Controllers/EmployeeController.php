@@ -107,7 +107,7 @@ class EmployeeController extends Controller
         //     $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
 
         $employee->update($attributes);
-        return back()->with('success', 'Employee Data Updated!');
+        return back();
     }
 
     public function destroy(Employee $employee)

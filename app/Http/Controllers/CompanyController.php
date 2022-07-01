@@ -42,6 +42,24 @@ class CompanyController extends Controller
         return redirect('/companies');
     }
 
+    public function edit(Company $company)
+    {
+        return view('company.edit', ['company' => $company]);
+    }
+
+    public function update(Company $company)
+    {
+        $attributes = request()->validate([
+            'name' => 'required',
+            'email' => 'image',
+            'logo' => 'required',
+            'website' => 'required'
+        ]);
+
+        $company->update($attributes);
+        return back();
+    }
+
     public function destroy(Company $company)
     {
         $company->delete();

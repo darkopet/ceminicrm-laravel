@@ -31,11 +31,13 @@ Route::post('/companies/create', [CompanyController::class, 'store']);
 
 Route::patch('/employees/{employee}/edit', [EmployeeController::class, 'edit']);
 Route::patch('/employees/{employee}', [EmployeeController::class, 'update']);
+Route::patch('/companies/{company}/edit', [CompanyController::class, 'edit']);
+Route::patch('/companies/{company}', [CompanyController::class, 'update']);
 
 // Route::get('employees/update', [EmployeeController::class, 'update']);
 // Route::post('employees/update', [EmployeeController::class, 'update']);
-Route::get('companies/update', [CompanyController::class, 'update']);
-Route::post('companies/update', [CompanyController::class, 'update']);
+// Route::get('companies/update', [CompanyController::class, 'update']);
+// Route::post('companies/update', [CompanyController::class, 'update']);
 
 Route::delete('employees/{employee}', [EmployeeController::class, 'destroy']);
 Route::delete('companies/{company}', [CompanyController::class, 'destroy']);
