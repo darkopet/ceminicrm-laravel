@@ -29,9 +29,10 @@ Route::post('/employees/create', [EmployeeController::class, 'store']);
 Route::get('/companies/create', [CompanyController::class, 'create']);
 Route::post('/companies/create', [CompanyController::class, 'store']);
 
-Route::patch('/employees/{employee}/edit', [EmployeeController::class, 'edit']);
+Route::get('/employees/{employee}/edit', [EmployeeController::class, 'edit']);
 Route::patch('/employees/{employee}', [EmployeeController::class, 'update']);
-Route::patch('/companies/{company}/edit', [CompanyController::class, 'edit']);
+
+Route::get('/companies/{company}/edit', [CompanyController::class, 'edit']);
 Route::patch('/companies/{company}', [CompanyController::class, 'update']);
 
 // Route::get('employees/update', [EmployeeController::class, 'update']);
