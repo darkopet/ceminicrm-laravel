@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
-use Illuminate\Validation\Rule;
-use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Nullable;
 
 class EmployeeController extends Controller
 {
